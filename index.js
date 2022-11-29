@@ -7,14 +7,16 @@ const record = [
 ]
 function superbowlWin(arr) {
     for (const item of arr) {
-        if (item.result === "W") {
+        if (find(item) === true) {
             return item.year
         }
     }
 }
-const findAWin = record.find(item => item.result === "W");
 
-console.log(findAWin);
+function find(item) {
+    return (item.result==="W")
+}
+
 
 console.log(superbowlWin(record));
 
